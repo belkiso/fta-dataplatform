@@ -1,3 +1,11 @@
+# FastTrack for Azure
+
+See our [FastTrack for Azure landing page](https://github.com/Azure/FastTrackForAzure) for more information.
+
+# Data Platform Scenarios
+
+* [SQL on Azure IaaS](sqlonazureiaas/walkthrough.md)
+* [Azure SQL DB](azuresqldb/walkthrough.md)
 
 # Contributing
 
