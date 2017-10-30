@@ -5,7 +5,7 @@ See our [FastTrack for Azure landing page](https://github.com/Azure/FastTrackFor
 # Data Platform Scenarios
 
 * [SQL on Azure IaaS](sql-server-on-azure-vms/articles/sql-server-on-azure-vms.md)
-* [Azure SQL DB](azure-sql-database/articles/readme.md)
+* [Azure SQL DB](azure-sql-database/articles/)
 
 # Contributing
 
