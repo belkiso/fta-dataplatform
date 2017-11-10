@@ -1,41 +1,32 @@
 # POC Scenario: Deploying SQL Server on Azure IaaS VMs
 
 # Introduction
-Intent of this document is to curate and give you enough information in a single page to help you get started with deploying SQL Server on Azure IaaS VMs.
+The intent of this documetn is to provide you a single page in which to find the most current guidance for deploying SLQ Server into a Virtual Machine in Azure.
 
-SQL Server installed and hosted in the cloud on Windows Server Virtual Machines (VMs) running on Azure, also known as an infrastructure as a service (IaaS). SQL Server on Azure virtual machines is optimized for migrating existing SQL Server applications. All the versions and editions of SQL Server are available. It offers 100% compatibility with SQL Server, allowing you to host as many databases as needed and executing cross-database transactions. It offers full control on SQL Server and Windows.
+In this article we will look at how to deploy:
 
-# Use Case Scenarios for SQL Server on IaaS VMs
-There are many reasons that you might choose to host your data in Azure. If your application is moving to Azure, it improves performance to also move the data. But there are other benefits. You automatically have access to multiple data centers for a global presence and disaster recovery. The data is also highly secured and durable.
+* A single Virtual Machine running SQL Server
+* 2 SQL Server Virtual Machines using Always-On availability Groups
+* 2 SQL Server Virtual Machines configured as a fail-over cluster
 
-SQL Server running on Azure VMs is one option for storing your relational data in Azure. For example, you might want to configure the Azure VM as similarly as possible to an on-premises SQL Server machine. Or you might want to run additional applications and services on the same database server. 
 
-#### Host enterprise SQL Server apps in the cloud
-Reduce your capital investments and optimize operational expenses by running your on-premises Microsoft SQL Server applications in Azure. Azure gives you a wide range of SQL Server editions, including SQL Enterprise. Customers with Software assurance can choose to pay the SQL Server licensing based on usage or easily leverage their existing SQL Server licenses using our BYOL (Bring-Your-Own-License) images
 
-#### Develop and test SQL Server apps easily and cost effectively
-Azure gives you a fast, cost-effective way to develop and test SQL Server applications. Spin up a new development environment in minutes, paying only for what you use. SQL Server Developer images, including SQL Server 2016, provide all the SQL Server features with a free license for development and testing.
-
-#### Protect SQL Server databases in the cloud
-Azure Storage offers flexible, reliable, and limitless off-site backup storage for your SQL Server applications, without the hassles of traditional tape archives. Enable full backups with point-in-time restore directly through SQL Server Management Studio. Back up on-premises SQL Server databases and instances running in an Azure virtual machine—and restore backups to either your datacenter or an Azure virtual machine.
-
-#### Improve business continuity and global BI reporting
-In the event of a disaster, you can improve business continuity by placing your SQL Server AlwaysOn Availability Group replicas in virtual machines. SQL Server 2014 gives you up to eight readable replicas, which you can deploy to a fast-growing list of Azure regions around the world. You can also use AlwaysOn to set up fast failover for database applications running in Azure. Strategic placement of your SQL Server replicas not only improves business continuity and disaster recovery, but lets you offload business intelligence reporting to the closest Azure region
-
-#### For additional information refer to the following resources
-[SQL Server on Azure virtual machines](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)  provides an overview of the best scenarios for using SQL Server on Azure VMs.
-
-# Prerequisite 
-* Understanding of Azure IaaS concepts & Azure Subscription to deploy SQL server.
-
-# Azure SQL DB (PaaS) vs. SQL Server on IaaS VMs
-While the intent of this document is to purely focus on SQL Server running on IaaS VMs, its better to understand Azure SQL DB using which you can reap the most benefit of going to cloud. Its recommended that you look at Azure SQL DB first, if it satisfies your need leverage that. If not use SQL Server on IaaS VMs.
-
-Here are couple of documents that can help you choose Azure SQL Database vs. SQL Server on IaaS VMs
+#### Additional information
+* Implementation Scenarios: [SQL Server on Azure virtual machines](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)  
 
 * High level comparision: [SQL Database (PaaS) vs. SQL Server on VMs (IaaS)](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-paas-vs-sql-server-iaas) 
 
 * Detailed feature level comparision: [SQL Database (PaaS) vs. SQL Server on VMs (IaaS)](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-features) 
+
+# Prerequisite 
+Before starting this POC you should have:
+
+* An understanding of IaaS fundamentals
+* An Active Azure subscription
+* Knowledge of SQL Server
+* A working Active Directory in Azure (for always-on and Clustering POCs)
+
+
 
 # Ramp up
 Here few resources that can help you get started with running SQL Server on IaaS VMs:
@@ -47,18 +38,23 @@ Here few resources that can help you get started with running SQL Server on IaaS
 
 # Performance best practices for SQL Server in Azure Virtual Machines
 
-This topic provides best practices for optimizing SQL Server performance in Microsoft Azure Virtual Machine. While running SQL Server in Azure Virtual Machines, we recommend that you continue using the same database performance tuning options that are applicable to SQL Server in on-premises server environment. However, the performance of a relational database in a public cloud depends on many factors such as the size of a virtual machine, and the configuration of the data disks. 
+Runnign SQL Server in a virtual machine is very simialr to runnign SQL Server on-prem.  There are a number of steps that need to be taken to ensure optimal performance for the SQL engine which include:
 
-When creating SQL Server images, [consider provisioning your VMs in the Azure portal](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision). SQL Server VMs provisioned in the Portal with Resource Manager implement all these best practices, including the storage configuration. 
+* Proper disk provisioning
+* Filesystem formatting for SQL Server
+* SQL engine configurations
+* Database file alignment to disk
 
-If your workload is less demanding, you might not require every optimization listed in the following performance best practices document. Consider your performance needs and workload patterns as you evaluate these recommendations.
+In addition to these standard items that shodl be configured for all SQL Servers, Azure has some additional best practises htat will ensure your SQL VM runs at the optimal performance level.  THese are all descibed in the following article.
 
-For more information on *how* to make optimizations, please review [Performance best practices for SQL Server in Azure Virtual Machines](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance)
+* [Performance Best Practises for SQL Server on VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance)
 
-# Setup & Configuraiton
-When it comes to deploying SQL Server on IaaS VMs, it can be deployed in few different ways. It can be deployed through Azure Portal, PowerShell or using Resource Manager Template. Few widely used options covered below.
 
-#### Provision a single SQL Server virtual machine using Azure Portal
+
+# Deploying a Single SQL Virtual Machine
+Deplying a SQL Server VM within Azure is a simple process which can be achieved either via the portal or from the command line.  
+
+## Provision a single SQL Server virtual machine using Azure Portal
 
 This end-to-end tutorial shows you how to use the Azure Portal to provision a virtual machine running SQL Server. 
 The Azure virtual machine gallery includes several images that contain Microsoft SQL Server. With a few clicks, you can select one of the SQL VM images from the gallery and provision it in your Azure environment.
@@ -66,24 +62,24 @@ The Azure virtual machine gallery includes several images that contain Microsoft
 For a step-by-step tutorial please see [Provision a Single SQL Server VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision) 
 
 
-#### Provision a single SQL Server virtual machine using Azure PowerShell 
+## Provision a single SQL Server virtual machine using Azure PowerShell 
 
 This tutorial shows you how to create a single Azure virtual machine using the Azure Resource Manager deployment model using Azure PowerShell cmdlets. In this tutorial, we will create a single virtual machine using a single disk drive from an image in the SQL Gallery. 
 
 For a step-by-step tutorial please see [Provision a Single SQL Server VM using PowerShell](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-ps-sql-create) 
 
+# Deploying SQL Server in High Availability Scenarios
 
-#### Provision SQL Server Always On availability groups on Azure virtual machines using Azure Portal
+## Deploying SQL Server Always On availability groups on Azure virtual machines (Manually)
 
-This tutorial introduces SQL Server availability groups setup on Azure Virtual Machines using Portal. Always On availability groups on Azure Virtual Machines are similar to Always On availability groups on premises. For more information, see Always On [Availability Groups (SQL Server)](https://msdn.microsoft.com/library/hh510230.aspx). 
+Deploying SQL Server and setting up Always-ON availabliity groups is a common scenario for customers wanting to add high availability and scaleability to their environemnt.  In Azure, this can be achieved maually or by using a pre-defined template to do all the configuration for you.
 
-The figure below is a graphical representation of the solution.
-![Screenshot](media/sql-server-on-azure-vms/aoag-azurevm-portal.png)
+Before starting either of these you will need ot ensure you have a domain so that the virtual machines can be domain joined.
 
-For a step-by-step tutorial please see on how to [Manually create an availability group in Azure portal](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview#manually-create-an-availability-group-in-azure-portal)
+For a step-by-step guide to [implementing always-on manually in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-tutorial), please follow this link
 
+## Deploying SQL Server Always On availability groups on Azure virtual machines (Template)
 
-#### Provision SQL Server Always On availability groups on Azure virtual machines using Template
 
 This tutorial shows you how to create a SQL Server availability group with Azure Resource Manager virtual machines. The tutorial uses Azure blades to configure a template. You will review the default settings, type required settings, and update the blades in the portal as you walk through this tutorial. 
 
@@ -107,7 +103,7 @@ For a step-by-step tutorial please see on how to [Configure Always On availabili
 # Migrate a SQL Server database to SQL Server in an Azure VM
 There are a number of methods for migrating an on-premises SQL Server user database to SQL Server in an Azure VM. 
 
-#### What are the primary migration methods?
+#### What are options for migrating a Database?
 
 The primary migration methods are:
 
@@ -131,20 +127,8 @@ For more information on choosing the right migration method see [Migrate a SQL S
 
 This topic includes overall security guidelines that help establish secure access to SQL Server instances in an Azure VM. However, in order to ensure better protection to your SQL Server database instances in Azure, we recommend that you implement the traditional on-premises security practices in addition to the security best practices for Azure.
 
-For more information about the SQL Server security practices, see [SQL Server 2008 R2 Security Best Practices - Operational and Administrative Tasks](http://download.microsoft.com/download/1/2/A/12ABE102-4427-4335-B989-5DA579A4D29D/SQL_Server_2008_R2_Security_Best_Practice_Whitepaper.docx)
+For more information about the SQL Server security practices, see [Security Considerations for SQL Server Installations](https://docs.microsoft.com/en-us/sql/sql-server/install/security-considerations-for-a-sql-server-installation)
 
 Azure complies with several industry regulations and standards that can enable you to build a compliant solution with SQL Server running in a Virtual Machine. For information about regulatory compliance with Azure, see [Azure Trust Center](https://azure.microsoft.com/en-us/support/trust-center/).
 
-For more information see [Security Considerations for SQL Server in Azure Virtual Machines](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-security#considerations-for-managing-accounts).
 
-# Additional resources
-
-#### Application Patterns and Development Strategies for SQL Server in Azure Virtual Machines
-
-Determining which application pattern or patterns to use for your SQL-Server-based applications in Azure environment is an important design decision and it requires a solid understanding of how SQL Server and each infrastructure component of Azure work together. With SQL Server in Azure Infrastructure Services, you can easily migrate, maintain, and monitor your existing SQL Server applications built-on Windows Server to virtual machines in Azure. 
-
-The goal of this article is to provide solution architects and developers a foundation for good application architecture and design, which they can follow when migrating existing applications to Azure as well as developing new applications in Azure. 
-
-For each application pattern, you will find an on-premises scenario, its respective cloud-enabled solution, and the related technical recommendations. In addition, the article discusses Azure-specific development strategies so that you can design your applications correctly. Due to the many possible application patterns, it’s recommended that architects and developers should choose the most appropriate pattern for their applications and users.
-
-For more information see [Application Patterns and Development Strategies for SQL Server in Azure VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-app-patterns-dev-strategies)
