@@ -1,7 +1,7 @@
 # POC Scenario: Deploying SQL Server on Azure IaaS VMs
 
 # Introduction
-The intent of this documetn is to provide you a single page in which to find the most current guidance for deploying SQL Server into a Virtual Machine in Azure.
+The intent of this document is to provide you a single page in which to find the most current guidance for deploying SQL Server into a Virtual Machine in Azure.
 
 In this article we will look at how to deploy:
 
