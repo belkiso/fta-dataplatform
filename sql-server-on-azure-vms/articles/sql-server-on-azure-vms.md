@@ -99,6 +99,23 @@ The figure below is a graphical representation of the solution.
 
 For a step-by-step tutorial please see on how to [Configure Always On availability group in Azure VM automatically - Resource Manager](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-availability-groups)
 
+## Deploying SQL Server as a Fail-Over Cluster
+
+This tutorial explains how to create a SQL Server Failover Cluster Instance (FCI) on Azure virtual machines in Resource Manager model. This solution uses Windows Server 2016 Datacenter edition Storage Spaces Direct (S2D) as a software-based virtual SAN that synchronizes the storage (data disks) between the nodes (Azure VMs) in a Windows Cluster. S2D is new in Windows Server 2016.
+
+The following diagram shows the complete solution on Azure virtual machines:
+![Screenshot](media/sql-server-on-azure-vms/sql-fci-complete-solution.png)
+
+The preceding diagram shows:
+
+* Two Azure virtual machines in a Windows Failover Cluster. When a virtual machine is in a failover cluster it is also called a cluster node, or nodes.
+* Each virtual machine has two or more data disks.
+* S2D synchronizes the data on the data disk and presents the synchronized storage as a storage pool.
+* The storage pool presents a cluster shared volume (CSV) to the failover cluster.
+* The SQL Server FCI cluster role uses the CSV for the data drives.
+* An Azure load balancer to hold the IP address for the SQL Server FCI.
+* An Azure availability set holds all the resources.
+
 # Migrate a SQL Server database to SQL Server in an Azure VM
 There are a number of methods for migrating an on-premises SQL Server user database to SQL Server in an Azure VM. 
 
