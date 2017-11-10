@@ -37,14 +37,14 @@ Here few resources that can help you get started with running SQL Server on IaaS
 
 # Performance best practices for SQL Server in Azure Virtual Machines
 
-Running SQL Server in a virtual machine is very simialr to runnign SQL Server on-prem.  There are a number of steps that need to be taken to ensure optimal performance for the SQL engine which include:
+Running SQL Server in a virtual machine is very similar to running SQL Server on-prem.  There are a number of steps that need to be taken to ensure optimal performance for the SQL engine which include:
 
 * Proper disk provisioning
 * Filesystem formatting for SQL Server
 * SQL engine configurations
 * Database file alignment to disk
 
-In addition to these standard items that shodl be configured for all SQL Servers, Azure has some additional best practises htat will ensure your SQL VM runs at the optimal performance level.  These are all descibed in the following article.
+In addition to these standard items that should be configured for all SQL Servers, Azure has some additional best practises that will ensure your SQL VM runs at the optimal performance level.  These are all described in the following article.
 
 * [Performance Best Practises for SQL Server on VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance)
 
@@ -71,9 +71,9 @@ For a step-by-step tutorial please see [Provision a Single SQL Server VM using P
 
 ## Deploying SQL Server Always On availability groups on Azure virtual machines (Manually)
 
-Deploying SQL Server and setting up Always-ON availabliity groups is a common scenario for customers wanting to add high availability and scalability to their environemnt.  In Azure, this can be achieved maually or by using a pre-defined template to do all the configuration for you.
+Deploying SQL Server and setting up Always-ON availablility groups is a common scenario for customers wanting to add high availability and scalability to their environemnt.  In Azure, this can be achieved manually or by using a pre-defined template to do all the configuration for you.
 
-Before starting either of these you will need ot ensure you have a domain so that the virtual machines can be domain joined.
+Before starting either of these you will need to ensure you have a domain so that the virtual machines can be domain joined.
 
 For a step-by-step guide to [implementing always-on manually in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-tutorial), please follow this link
 
@@ -86,7 +86,7 @@ At the end of the tutorial, your SQL Server availability group solution in Azure
 
 * A virtual network containing multiple subnets, including a front-end and a back-end subnet
 
-* Two domain controller with an Active Directory (AD) domain
+* Two domain controllers with an Active Directory (AD) domain
 
 * Two SQL Server VMs deployed to the back-end subnet and joined to the AD domain
 
