@@ -116,6 +116,8 @@ The preceding diagram shows:
 * An Azure load balancer to hold the IP address for the SQL Server FCI.
 * An Azure availability set holds all the resources.
 
+For a step-by-step tutorial please how to [Configure SQL Server Failover Cluster Instance on Azure Virtual Machines](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-create-failover-cluster)
+
 # Migrate a SQL Server database to SQL Server in an Azure VM
 There are a number of methods for migrating an on-premises SQL Server user database to SQL Server in an Azure VM. 
 
