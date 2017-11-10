@@ -1,7 +1,7 @@
 # POC Scenario: Deploying SQL Server on Azure IaaS VMs
 
 # Introduction
-The intent of this documetn is to provide you a single page in which to find the most current guidance for deploying SLQ Server into a Virtual Machine in Azure.
+The intent of this documetn is to provide you a single page in which to find the most current guidance for deploying SQL Server into a Virtual Machine in Azure.
 
 In this article we will look at how to deploy:
 
@@ -38,14 +38,14 @@ Here few resources that can help you get started with running SQL Server on IaaS
 
 # Performance best practices for SQL Server in Azure Virtual Machines
 
-Runnign SQL Server in a virtual machine is very simialr to runnign SQL Server on-prem.  There are a number of steps that need to be taken to ensure optimal performance for the SQL engine which include:
+Running SQL Server in a virtual machine is very simialr to runnign SQL Server on-prem.  There are a number of steps that need to be taken to ensure optimal performance for the SQL engine which include:
 
 * Proper disk provisioning
 * Filesystem formatting for SQL Server
 * SQL engine configurations
 * Database file alignment to disk
 
-In addition to these standard items that shodl be configured for all SQL Servers, Azure has some additional best practises htat will ensure your SQL VM runs at the optimal performance level.  THese are all descibed in the following article.
+In addition to these standard items that shodl be configured for all SQL Servers, Azure has some additional best practises htat will ensure your SQL VM runs at the optimal performance level.  These are all descibed in the following article.
 
 * [Performance Best Practises for SQL Server on VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance)
 
