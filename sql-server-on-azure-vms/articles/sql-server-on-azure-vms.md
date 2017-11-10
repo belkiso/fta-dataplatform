@@ -27,7 +27,6 @@ Before starting this POC you should have:
 * A working Active Directory in Azure (for always-on and Clustering POCs)
 
 
-
 # Ramp up
 Here few resources that can help you get started with running SQL Server on IaaS VMs:
 
@@ -72,7 +71,7 @@ For a step-by-step tutorial please see [Provision a Single SQL Server VM using P
 
 ## Deploying SQL Server Always On availability groups on Azure virtual machines (Manually)
 
-Deploying SQL Server and setting up Always-ON availabliity groups is a common scenario for customers wanting to add high availability and scaleability to their environemnt.  In Azure, this can be achieved maually or by using a pre-defined template to do all the configuration for you.
+Deploying SQL Server and setting up Always-ON availabliity groups is a common scenario for customers wanting to add high availability and scalability to their environemnt.  In Azure, this can be achieved maually or by using a pre-defined template to do all the configuration for you.
 
 Before starting either of these you will need ot ensure you have a domain so that the virtual machines can be domain joined.
 
