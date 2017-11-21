@@ -4,7 +4,7 @@ This folder is work in progress, please stay tuned!
 
 # Abstract
 
-During this module you will learn how to restore a database to a logical Azure SQL Database server.  Restoring a deleted database can only be done to the same server it was deleted from and this process will create a new databse from a backup created during deletion.
+During this module you will learn how to restore a database to a logical Azure SQL Database server.  Restoring a deleted database can only be done to the same server it was deleted from and this process will create a new database from a backup created during deletion.
 
 # Learning Objectives
 
@@ -21,7 +21,7 @@ Self-guided (15 minutes approx)
 
 # Checking for an existing backup
 
-Before continuing you need to delete the database that you created in earlier.  Before deleteing the database you need to ensure that teh database has been backed up by the Azure SQL Server.  To do this you need to:
+Before continuing you need to delete the database that you created in earlier.  Before deleting the database you need to ensure that teh database has been backed up by the Azure SQL Server.  To do this you need to:
 
 * Go to the Azure portal [https://portal.azure.com](https://portal.azure.com)
 * From the left hand navigation menu select **SQL Databases**
@@ -43,7 +43,7 @@ To delete the database you need to:
 * click on the Delete button in the top menu of the current screen
 * Press *yes* on the next prompt
 
-The Database will now be deleted but it make take a couple of minutes for the option to restore the database to become avaiable.
+The Database will now be deleted but it make take a couple of minutes for the option to restore the database to become available.
 
 # Restoring a Deleted Database
 
@@ -56,11 +56,11 @@ To restore a previously deleted database you need to:
 
 ![Screenshot](media/6-restore-deleted-database/sqldb-deleted-option.png)
 
-Providing a few minutes have passed since you deleted the databse, the deleted database will appear in the list.  
+Providing a few minutes have passed since you deleted the database, the deleted database will appear in the list.  
 
 * Click the database to bring up the restore menu 
-* Name the databse *AVWorks*
+* Name the database *AVWorks*
 * Click OK to start the restore.
 
 >**NOTE**
-> You can't change the point in time for teh restore, it will restore the database to the last know backup point, which willlbe the time at which the databse was deleted.
+> You can't change the point in time for teh restore, it will restore the database to the last know backup point, which will be the time at which the database was deleted.
