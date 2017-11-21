@@ -16,7 +16,7 @@ By the end of this module you will be able to:
 ## Pre-Requisites
 
 * To comlete this module you will need to:
-    * Download the sample .csv file [here](../articles/artifacts/sql-perfmon-log.csv)
+    * Download the sample .csv file [here](../articles/artefacts/sql-perfmon-log.csv)
 
 # Estimated time to complete this module:
 Self-guided (5 minutes approx)
