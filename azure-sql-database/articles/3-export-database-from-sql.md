@@ -6,7 +6,7 @@ This folder is work in progress, please stay tuned!
 
 During this module you will learn the process for exporting a database from a physical or virtual SQL Server which can then be imported into Azure SQL Database
 
-# Learning Objectves
+# Learning Objectives
 
 By the end of this module you will be able to:
 
@@ -17,8 +17,8 @@ By the end of this module you will be able to:
 
 * To complete this module you will need:
     * A local instance of SQL Server or a SQL VM
-    * SQL Server Manageemnt Studio
-    * A Database running on that local or VM insatnce of SQL Server
+    * SQL Server Management Studio
+    * A Database running on that local or VM instance of SQL Server
     * AZCopy which can be downloaded from [here](https://docs.microsoft.com/en-us/azure/storage/storage-use-azcopy)
     * An Azure Storage Account
 
@@ -27,7 +27,7 @@ Self-guided (10 minutes approx)
 
 # Exporting a Database
 
-Exporting a database from a physical server or virtual machine makes use of the built in functionallity of SQL Server.  Data exports to Azure use the BACPAC file format, which is a specific type of zip file that contains metadata for the structure of teh databse as well as teh actual data its self.  To export a database to a bacpac file you need to:
+Exporting a database from a physical server or virtual machine makes use of the built in functionality of SQL Server.  Data exports to Azure use the BACPAC file format, which is a specific type of zip file that contains metadata for the structure of teh database as well as teh actual data its self.  To export a database to a bacpac file you need to:
 
 * Right click on the database in SQL Server Management Studio
 * Select "Tasks" from the context menu

@@ -6,7 +6,7 @@ This folder is work in progress, please stay tuned!
 
 During this module you will learn how to create a logical server and an Azure SQL Database using the AdventureWorksLT sample
 
-# Learning Objectves
+# Learning Objectives
 
 By the end of this module you will be able to:
 
@@ -46,9 +46,4 @@ From the New Database Blade:
 
 ![Screenshot](media/1-create-sample-azure-sqldb/sqldb-create-new-server.png)
 
-After a few minutes the logical server and sample database will be created.  Once created you will be able to ater settings for the database or open the firewall to allow exteral connection - such as SQL Server Management Studio.
-
-
-
-
-
+After a few minutes the logical server and sample database will be created.  Once created you will be able to alter settings for the database or open the firewall to allow external connection - such as SQL Server Management Studio.
