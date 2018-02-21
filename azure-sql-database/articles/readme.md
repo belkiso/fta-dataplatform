@@ -1,3 +1,8 @@
+# FastTrack for Azure
+
+See our [FastTrack for Azure landing page](https://github.com/Azure/FastTrackForAzure) for more information.
+
+
 # FastTrack for Azure SQL Database
 
 In this folder you will find a number of walkthroughs that relate to common activities when working with Azure SQL Database.  These include:
