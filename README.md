@@ -2,10 +2,10 @@
 
 See our [FastTrack for Azure landing page](https://github.com/Azure/FastTrackForAzure) for more information.
 
-# Data Platform Scenarios
+# Data Modernization to Azure Scenarios
 
-* [SQL on Azure IaaS](sql-server-on-azure-vms/articles/sql-server-on-azure-vms.md)
 * [Azure SQL DB](azure-sql-database/articles/)
+* [SQL on Azure IaaS](sql-server-on-azure-vms/articles/sql-server-on-azure-vms.md)
 
 # Contributing
 
