@@ -6,7 +6,10 @@ See our [FastTrack for Azure landing page](https://github.com/Azure/FastTrackFor
 
 * [Azure SQL DB](azure-sql-database/articles/)
 * [SQL on Azure IaaS](sql-server-on-azure-vms/articles/sql-server-on-azure-vms.md)
-
+* [Big Data Storage](big-data-storage/articles/big-data-storage.md) *WIP*
+* [Analytics Processing](analytics-processing/articles/analytics-processing.md) *WIP*
+* [NoSQL Solutions](nosql-solutions/articles/nosql-solutions.md) *WIP*
+* [Data Movement and Orchestration](data-movement-orchestration/articles/data-movement-orchestration.md)
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
