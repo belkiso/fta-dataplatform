@@ -27,19 +27,19 @@ To create a create a Spark cluster in your Azure Databricks workspace:
 * Navigate to the portal at [https://portal.azure.com](https://portal.azure.com)
 * From within the portal, locate the Azure Databricks workspace you created, naviate to the workspace
 
-![Screenshot](media\2-create-spark-cluster-in-azure-databricks/create-spark-cluster-in-azure-databricks-1.jpg)
+![Screenshot](media/2-create-spark-cluster-in-azure-databricks/create-spark-cluster-in-azure-databricks-1.jpg)
 
 * From within your Databricks workspace blade, under Overview section, click on "Launch Workspace"  
 
-![Screenshot](media\2-create-spark-cluster-in-azure-databricks/create-spark-cluster-in-azure-databricks-2.jpg)
+![Screenshot](media/2-create-spark-cluster-in-azure-databricks/create-spark-cluster-in-azure-databricks-2.jpg)
 
 * You are redirected to the Azure Databricks login page, as shown below:
 
-![Screenshot](media\2-create-spark-cluster-in-azure-databricks/create-spark-cluster-in-azure-databricks-3.jpg)
+![Screenshot](media/2-create-spark-cluster-in-azure-databricks/create-spark-cluster-in-azure-databricks-3.jpg)
 
 * After Azure Databricks AAD authentication succeeds, you are redirected to the Azure Databricks portal. From the portal, click **New Cluster**
 
-![Screenshot](media\2-create-spark-cluster-in-azure-databricks/create-spark-cluster-in-azure-databricks-4.jpg)
+![Screenshot](media/2-create-spark-cluster-in-azure-databricks/create-spark-cluster-in-azure-databricks-4.jpg)
 
 From the New Cluster Page, provide the values to create a cluster. For this cluster creation, accept all other default values other than the following:
 
@@ -49,6 +49,6 @@ From the New Cluster Page, provide the values to create a cluster. For this clus
 
 * Select Create cluster. Once the cluster is running, you can attach notebooks to the cluster and run Spark jobs.
 
-![Screenshot](media\1-create-sample-azure-databricks-workspace/databricks-create-new-workspace-5.jpg)
+![Screenshot](media/1-create-sample-azure-databricks-workspace/databricks-create-new-workspace-5.jpg)
 
 The Spark Cluster creation takes a few minutes.

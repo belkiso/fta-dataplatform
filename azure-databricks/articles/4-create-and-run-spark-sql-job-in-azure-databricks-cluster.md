@@ -26,19 +26,19 @@ To create a notebook in Azure Databricks workspace:
 
 1. In the left pane, click **Workspace**. From the **Workspace** drop-down, click **Create**, and then click **Notebook**
 
-![Screenshot](media\4-create-and-run-spark-sql-job-in-azure-databricks-cluster/create-and-run-spark-sql-job-in-azure-databricks-cluster-1.jpg)
+![Screenshot](media/4-create-and-run-spark-sql-job-in-azure-databricks-cluster/create-and-run-spark-sql-job-in-azure-databricks-cluster-1.jpg)
 
 Alternatively, you can also create a new notebook from the main Azure Databricks Portal. Click **New Notebook** from the main portal page, as shown below.
-![Screenshot](media\4-create-and-run-spark-sql-job-in-azure-databricks-cluster/create-and-run-spark-sql-job-in-azure-databricks-cluster-11.jpg)
+![Screenshot](media/4-create-and-run-spark-sql-job-in-azure-databricks-cluster/create-and-run-spark-sql-job-in-azure-databricks-cluster-11.jpg)
 
 2. In the **Create Notebook** dialog box, enter a name, select **Scala** as the language (by default **Python** is select, you can use **Python**, **Scala**, **SQL** or **R** as a language for your notebook)
 3. Select the Spark cluster that you created earlier and then click **Create**
 
-![Screenshot](media\4-create-and-run-spark-sql-job-in-azure-databricks-cluster/create-and-run-spark-sql-job-in-azure-databricks-cluster-2.jpg)
+![Screenshot](media/4-create-and-run-spark-sql-job-in-azure-databricks-cluster/create-and-run-spark-sql-job-in-azure-databricks-cluster-2.jpg)
 
 Please note that, if you have a cluster created but the cluster is not running at the moment, you won't see the cluster option in the dialog box, as shown below. In this scenario, you can attach your notebook later, after it is created, before you run it, you would just have to start your cluster first.
 
-![Screenshot](media\4-create-and-run-spark-sql-job-in-azure-databricks-cluster/create-and-run-spark-sql-job-in-azure-databricks-cluster-21.jpg)
+![Screenshot](media/4-create-and-run-spark-sql-job-in-azure-databricks-cluster/create-and-run-spark-sql-job-in-azure-databricks-cluster-21.jpg)
 
 
 4. We will now have to associate our data source (in this notebook scenario, our Azure Blob Storage for our sample data). There are two ways to accomplish this association. You can **mount the Azure Storage account to the Databricks Filesystem (DBFS)**, or **directly access** the Azure Storage account from the application you create
@@ -56,7 +56,7 @@ To execute the code, in the cell ("cell is where we write out code in Azure Data
 
 Below screenshot shows another way of running the cell (the snippet of code), in your notebook
 
-![Screenshot](media\4-create-and-run-spark-sql-job-in-azure-databricks-cluster/create-and-run-spark-sql-job-in-azure-databricks-cluster-3.jpg)
+![Screenshot](media/4-create-and-run-spark-sql-job-in-azure-databricks-cluster/create-and-run-spark-sql-job-in-azure-databricks-cluster-3.jpg)
 
 5. Run a SQL statement to create a temporary table using data from the sample JSON data file, *small_radio_json.json*. In the following snippet, replace the placeholder values with your container name and storage account name. Paste the snippet in a code cell in the notebook, and then press **SHIFT + ENTER**. In the snippet, path refer to the location of the sample JSON file that you uploaded to your Azure Storage account.
     %sql 
@@ -78,10 +78,10 @@ The %sql language magic command enables you to run a SQL code from the notebook,
     SELECT * from radio_sample_data
 
 You see a tabular output as shown in the following screenshot:
-![Screenshot](media\4-create-and-run-spark-sql-job-in-azure-databricks-cluster/create-and-run-spark-sql-job-in-azure-databricks-cluster-4.jpg)
+![Screenshot](media/4-create-and-run-spark-sql-job-in-azure-databricks-cluster/create-and-run-spark-sql-job-in-azure-databricks-cluster-4.jpg)
 
 You can create a visual representation of data. We will look into the visual representation (charts etc.) in another walkthrough.
 
 7, After reviewing the output, once you are done testing your notebook processing logic, you may want to stop the cluster so you can avoid unnecessary  compute charges.  To stop the cluster, navigate to **Clusters** tab, hover over your cluster and click on **Terminate** button, as shown below:  
 
-![Screenshot](media\4-create-and-run-spark-sql-job-in-azure-databricks-cluster/create-and-run-spark-sql-job-in-azure-databricks-cluster-5.jpg)
+![Screenshot](media/4-create-and-run-spark-sql-job-in-azure-databricks-cluster/create-and-run-spark-sql-job-in-azure-databricks-cluster-5.jpg)

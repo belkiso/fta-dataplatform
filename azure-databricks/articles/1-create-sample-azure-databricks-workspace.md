@@ -33,7 +33,7 @@ To create a create an Azure Databricks workspace:
 * Select **Analytics** 
 * Select **Azure Databricks.**
 
-![Screenshot](media\1-create-sample-azure-databricks-workspace/databricks-create-new-workspace-1.jpg)
+![Screenshot](media/1-create-sample-azure-databricks-workspace/databricks-create-new-workspace-1.jpg)
 
 From the New Database Blade:
 
@@ -43,6 +43,6 @@ From the New Database Blade:
 * Select a Location for the server *EastUS2 in this Example*
 * Select a pricing tier from the drop dwon "Standard (Apache Spark, Secure with Azure A...")
 
-![Screenshot](media\1-create-sample-azure-databricks-workspace/databricks-create-new-workspace-2.jpg)
+![Screenshot](media/1-create-sample-azure-databricks-workspace/databricks-create-new-workspace-2.jpg)
 
 The workspace creation takes a few minutes. There will be a progress bar displayed near the right top of the screen.
