@@ -6,7 +6,7 @@ See our [FastTrack for Azure landing page](https://github.com/Azure/FastTrackFor
 
 * [Azure SQL DB](azure-sql-database/articles/)
 * [SQL on Azure IaaS](sql-server-on-azure-vms/articles/sql-server-on-azure-vms.md)
-* [Azure Databricks] (azure-databricks/articles/)
+* [Azure Databricks](azure-databricks/articles/)
 
 # Contributing
 
