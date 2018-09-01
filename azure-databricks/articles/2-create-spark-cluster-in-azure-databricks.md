@@ -49,6 +49,6 @@ From the New Cluster Page, provide the values to create a cluster. For this clus
 
 * Select Create cluster. Once the cluster is running, you can attach notebooks to the cluster and run Spark jobs.
 
-![Screenshot](media/2-create-sample-azure-databricks-workspace/databricks-create-new-workspace-5.png)
+![Screenshot](media/2-create-spark-cluster-in-azure-databricks/databricks-create-new-workspace-5.png)
 
 The Spark Cluster creation takes a few minutes.
