@@ -50,7 +50,7 @@ source = "wasbs://{YOUR CONTAINER NAME}@{YOUR STORAGE ACCOUNT NAME}.blob.core.wi
 mountPoint = "/mnt/mypath",
 extraConfigs = Map("fs.azure.account.key.{YOUR STORAGE ACCOUNT NAME}.blob.core.windows.net" -> "{YOUR STORAGE ACCOUNT ACCESS KEY}"))
 
-For instructions on how to retrieve the storage account key, see [Manage your storage access keys] (https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account#manage-your-storage-account).
+For instructions on how to retrieve the storage account key, see [Manage your storage access keys](https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account#manage-your-storage-account).
 
 To execute the code, in the cell ("cell is where we write out code in Azure Databricks Notebook"), you can press **SHIFT + ENTER**.
 
@@ -71,7 +71,7 @@ Please **note** that, in the code above, we are using magic command (%sql) to ch
 
 Once the command successfully completes, you have all the data from the JSON file as a table in Databricks cluster.
 
-The %sql language magic command enables you to run a SQL code from the notebook, even if the notebook is of another type. For more information, see [Mixing languages in a notebook] (https://docs.azuredatabricks.net/user-guide/notebooks/index.html#mixing-languages-in-a-notebook)
+The %sql language magic command enables you to run a SQL code from the notebook, even if the notebook is of another type. For more information, see [Mixing languages in a notebook](https://docs.azuredatabricks.net/user-guide/notebooks/index.html#mixing-languages-in-a-notebook)
 
 6. Let's look at a snapshot of the sample JSON data to better understand the query that you run. Paste the following snippet in the code cell and press **SHIFT + ENTER**.
     %sql 
